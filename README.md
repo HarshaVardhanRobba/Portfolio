@@ -2,7 +2,7 @@
 
 A personal portfolio website for Harshavardhan Robba, AI/ML & LLM Engineer. Built with vanilla HTML, CSS, and JavaScript — no frameworks, no build tools, no dependencies.
 
-**Live site:** [harshavardhan-robba-portfolio.vercel.app](https://harshavardhan-robba-portfolio.vercel.app)
+**Live site:** [harshavardhan-robba-portfolio.vercel.app](https://portfolio-harshavardhanrobba.vercel.app/)
 
 ---
 
