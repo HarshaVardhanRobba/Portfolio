@@ -1,0 +1,222 @@
+<section id="skills">
+  <div class="skills-inner">
+
+    <div class="sec-header fi">
+      <h2 class="sec-title">Technical Arsenal</h2>
+      <p class="sec-sub">35+ Technologies &amp; Tools</p>
+      <div class="sec-bar"></div>
+    </div>
+
+    <!-- Infinite carousel -->
+    <div class="car-wrap fi" aria-hidden="true">
+      <div class="car-row">
+        <div class="car-track go-l" id="cr1"></div>
+      </div>
+      <div class="car-row">
+        <div class="car-track go-r" id="cr2"></div>
+      </div>
+    </div>
+
+    <!-- Two-column: radar chart left, skill cards right -->
+    <div class="skills-layout">
+
+      <!-- Left: radar chart -->
+      <div class="skills-chart-col fi">
+        <div class="skills-chart-card">
+          <p class="skills-chart-title">Proficiency Overview</p>
+          <p class="skills-chart-hint">Hover each axis to see skills</p>
+          <div class="radar-svg-wrap">
+            <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Skill radar chart showing proficiency across 6 categories">
+              <!-- Concentric grid levels -->
+              <polygon points="200,168 228,184 228,216 200,232 172,216 172,184" fill="none" stroke="#e8e0d0" stroke-width="1"/>
+              <polygon points="200,136 255,168 255,232 200,264 145,232 145,168" fill="none" stroke="#e8e0d0" stroke-width="1"/>
+              <polygon points="200,104 283,152 283,248 200,296 117,248 117,152" fill="none" stroke="#e8e0d0" stroke-width="1"/>
+              <polygon points="200,72 311,136 311,264 200,328 89,264 89,136"   fill="none" stroke="#e8e0d0" stroke-width="1"/>
+              <polygon points="200,40 339,120 339,280 200,360 61,280 61,120"   fill="none" stroke="#e8e0d0" stroke-width="1"/>
+              <!-- Level labels -->
+              <text x="204" y="196" font-family="'IBM Plex Mono',monospace" font-size="8" fill="#e8e0d0">2</text>
+              <text x="204" y="164" font-family="'IBM Plex Mono',monospace" font-size="8" fill="#e8e0d0">4</text>
+              <text x="204" y="132" font-family="'IBM Plex Mono',monospace" font-size="8" fill="#e8e0d0">6</text>
+              <text x="204" y="100" font-family="'IBM Plex Mono',monospace" font-size="8" fill="#e8e0d0">8</text>
+              <text x="204" y="68"  font-family="'IBM Plex Mono',monospace" font-size="8" fill="#e8e0d0">10</text>
+              <!-- Axis lines -->
+              <line x1="200" y1="200" x2="200" y2="40"  stroke="#d0c8b8" stroke-width="1"/>
+              <line x1="200" y1="200" x2="339" y2="120" stroke="#d0c8b8" stroke-width="1"/>
+              <line x1="200" y1="200" x2="339" y2="280" stroke="#d0c8b8" stroke-width="1"/>
+              <line x1="200" y1="200" x2="200" y2="360" stroke="#d0c8b8" stroke-width="1"/>
+              <line x1="200" y1="200" x2="61"  y2="280" stroke="#d0c8b8" stroke-width="1"/>
+              <line x1="200" y1="200" x2="61"  y2="120" stroke="#d0c8b8" stroke-width="1"/>
+              <!-- Data polygon (animated by JS) -->
+              <polygon id="radar-polygon"
+                points="200,200 200,200 200,200 200,200 200,200 200,200"
+                fill="rgba(200,105,10,0.12)"
+                stroke="#c8690a"
+                stroke-width="2.5"
+                stroke-linejoin="round"/>
+              <!-- Axis label hit areas + text -->
+              <text x="200" y="20" text-anchor="middle"
+                font-family="'IBM Plex Mono',monospace" font-size="12" font-weight="500"
+                fill="#1a1f3a" style="cursor:default"
+                data-radar-label="AI / ML &amp; LLM"
+                data-radar-skills="LangChain · LangGraph · RAG&#10;Agentic Workflows · DeepEval&#10;OpenAI Realtime · Gemini 2.0&#10;Prompt Engineering · Structured Outputs&#10;Hallucination Detection · Semantic Search&#10;Tool Calling · Task Automation">AI / ML &amp; LLM</text>
+
+              <text x="355" y="114" text-anchor="start"
+                font-family="'IBM Plex Mono',monospace" font-size="12" font-weight="500"
+                fill="#1a1f3a" style="cursor:default"
+                data-radar-label="Backend &amp; APIs"
+                data-radar-skills="Node.js · Python · tRPC · REST&#10;Async/Streaming · Inngest&#10;API-First Design · Multi-tenant Systems">Backend &amp; APIs</text>
+
+              <text x="355" y="288" text-anchor="start"
+                font-family="'IBM Plex Mono',monospace" font-size="12" font-weight="500"
+                fill="#1a1f3a" style="cursor:default"
+                data-radar-label="Data &amp; Databases"
+                data-radar-skills="PostgreSQL · MongoDB · Prisma&#10;SQL · PySpark · Databricks&#10;Amazon RDS · Data Modeling · ETL/ELT&#10;Document Processing · Vector Databases">Data &amp; DB</text>
+
+              <text x="200" y="392" text-anchor="middle"
+                font-family="'IBM Plex Mono',monospace" font-size="12" font-weight="500"
+                fill="#1a1f3a" style="cursor:default"
+                data-radar-label="Infra &amp; Obs"
+                data-radar-skills="Docker · Kubernetes · Azure&#10;AWS (S3) · GCP · CI/CD&#10;OpenTelemetry · Monitoring · MCP&#10;LLMOps · LLM Monitoring">Infra &amp; Obs</text>
+
+              <text x="45" y="288" text-anchor="end"
+                font-family="'IBM Plex Mono',monospace" font-size="12" font-weight="500"
+                fill="#1a1f3a" style="cursor:default"
+                data-radar-label="Streaming &amp; Voice"
+                data-radar-skills="Twilio WebSockets · WebRTC&#10;Deepgram STT · Stream Video SDK&#10;Real-Time Audio Processing">Streaming &amp; Voice</text>
+
+              <text x="45" y="114" text-anchor="end"
+                font-family="'IBM Plex Mono',monospace" font-size="12" font-weight="500"
+                fill="#1a1f3a" style="cursor:default"
+                data-radar-label="Frontend &amp; Web"
+                data-radar-skills="Next.js · React · TypeScript&#10;HTML/CSS · TailwindCSS&#10;Client-Side Rendering · Responsive Design">Frontend &amp; Web</text>
+            </svg>
+          </div>
+        </div>
+        <!-- Tooltip -->
+        <div id="radar-tooltip" role="tooltip" aria-live="polite"></div>
+      </div>
+
+      <!-- Right: category skill cards -->
+      <div class="skills-cats-col fi">
+        <div class="skills-cats-grid">
+
+          <div class="sk-card sk-card--primary">
+            <div class="sk-card-head">
+              <span class="sk-card-label">AI / ML &amp; LLM</span>
+              <span class="sk-card-score">9 / 10</span>
+            </div>
+            <div class="sk-bar-wrap" aria-hidden="true"><div class="sk-bar" style="width:90%"></div></div>
+            <div class="sk-pills">
+              <span class="sk-pill">LangChain</span>
+              <span class="sk-pill">LangGraph</span>
+              <span class="sk-pill">RAG</span>
+              <span class="sk-pill">Agentic Workflows</span>
+              <span class="sk-pill">OpenAI Realtime</span>
+              <span class="sk-pill">Gemini 2.0</span>
+              <span class="sk-pill">DeepEval</span>
+              <span class="sk-pill">Prompt Engineering</span>
+              <span class="sk-pill">Structured Outputs</span>
+              <span class="sk-pill">Guardrails</span>
+              <span class="sk-pill">Semantic Search</span>
+              <span class="sk-pill">Tool Calling</span>
+              <span class="sk-pill">Hallucination Testing</span>
+              <span class="sk-pill">Task Automation</span>
+            </div>
+          </div>
+
+          <div class="sk-card">
+            <div class="sk-card-head">
+              <span class="sk-card-label">Backend &amp; APIs</span>
+              <span class="sk-card-score">9 / 10</span>
+            </div>
+            <div class="sk-bar-wrap" aria-hidden="true"><div class="sk-bar" style="width:90%"></div></div>
+            <div class="sk-pills">
+              <span class="sk-pill">Node.js</span>
+              <span class="sk-pill">Python</span>
+              <span class="sk-pill">tRPC</span>
+              <span class="sk-pill">REST</span>
+              <span class="sk-pill">Inngest</span>
+              <span class="sk-pill">FastAPI</span>
+              <span class="sk-pill">Express</span>
+              <span class="sk-pill">Async/Streaming</span>
+              <span class="sk-pill">API Design</span>
+            </div>
+          </div>
+
+          <div class="sk-card">
+            <div class="sk-card-head">
+              <span class="sk-card-label">Data &amp; Databases</span>
+              <span class="sk-card-score">8 / 10</span>
+            </div>
+            <div class="sk-bar-wrap" aria-hidden="true"><div class="sk-bar" style="width:80%"></div></div>
+            <div class="sk-pills">
+              <span class="sk-pill">PostgreSQL</span>
+              <span class="sk-pill">MongoDB</span>
+              <span class="sk-pill">Prisma</span>
+              <span class="sk-pill">SQL</span>
+              <span class="sk-pill">PySpark</span>
+              <span class="sk-pill">Databricks</span>
+              <span class="sk-pill">Amazon RDS</span>
+              <span class="sk-pill">ETL / ELT</span>
+              <span class="sk-pill">Document Processing</span>
+              <span class="sk-pill">Vector Databases</span>
+            </div>
+          </div>
+
+          <div class="sk-card">
+            <div class="sk-card-head">
+              <span class="sk-card-label">Infra &amp; Obs</span>
+              <span class="sk-card-score">8 / 10</span>
+            </div>
+            <div class="sk-bar-wrap" aria-hidden="true"><div class="sk-bar" style="width:80%"></div></div>
+            <div class="sk-pills">
+              <span class="sk-pill">Docker</span>
+              <span class="sk-pill">Kubernetes</span>
+              <span class="sk-pill">Azure</span>
+              <span class="sk-pill">AWS (S3)</span>
+              <span class="sk-pill">GCP</span>
+              <span class="sk-pill">CI / CD</span>
+              <span class="sk-pill">OpenTelemetry</span>
+              <span class="sk-pill">MCP</span>
+              <span class="sk-pill">LLMOps</span>
+              <span class="sk-pill">LLM Monitoring</span>
+            </div>
+          </div>
+
+          <div class="sk-card">
+            <div class="sk-card-head">
+              <span class="sk-card-label">Streaming &amp; Voice</span>
+              <span class="sk-card-score">7 / 10</span>
+            </div>
+            <div class="sk-bar-wrap" aria-hidden="true"><div class="sk-bar" style="width:70%"></div></div>
+            <div class="sk-pills">
+              <span class="sk-pill">Twilio WebSockets</span>
+              <span class="sk-pill">Deepgram STT</span>
+              <span class="sk-pill">Stream Video SDK</span>
+              <span class="sk-pill">WebRTC</span>
+              <span class="sk-pill">Audio Processing</span>
+            </div>
+          </div>
+
+          <div class="sk-card">
+            <div class="sk-card-head">
+              <span class="sk-card-label">Frontend &amp; Web</span>
+              <span class="sk-card-score">7 / 10</span>
+            </div>
+            <div class="sk-bar-wrap" aria-hidden="true"><div class="sk-bar" style="width:70%"></div></div>
+            <div class="sk-pills">
+              <span class="sk-pill">Next.js</span>
+              <span class="sk-pill">React</span>
+              <span class="sk-pill">TypeScript</span>
+              <span class="sk-pill">JavaScript</span>
+              <span class="sk-pill">HTML / CSS</span>
+              <span class="sk-pill">TailwindCSS</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div><!-- /.skills-layout -->
+
+  </div>
+</section>
