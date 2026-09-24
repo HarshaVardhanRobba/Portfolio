@@ -21,7 +21,7 @@
       </div>
       <div class="pcard-body">
         <div class="pcard-content">
-          <p class="pdesc">Multi-step LangGraph RAG pipeline ingesting compliance videos to extract timestamped evidence via Azure Video Indexer. Grounds all findings in cited retrieval results on Azure AI Search with full citation tracking. Integrates DeepEval hallucination and citation-coverage metrics directly into CI/CD gating, utilizing deploy-time LLM guardrails.</p>
+          <p class="pdesc">Multi-step LangGraph RAG pipeline ingesting compliance videos to extract timestamped evidence via Azure Video Indexer. Grounds all findings in cited retrieval results on Azure AI Search with full citation tracking. Integrates DeepEval hallucination and citation-coverage metrics directly into testing pipelines with CI/CD automation, utilizing LLM guardrails.</p>
           <div class="metrics">
             <div class="metric"><span class="mv" data-count="95" data-suffix="%">—</span><span class="ml">Hallucination Reduction</span></div>
             <div class="metric"><span class="mv" data-count="100" data-suffix="%">—</span><span class="ml">Grounded Citations</span></div>
@@ -64,16 +64,16 @@
       </div>
       <div class="tech-row">
         <span class="tp">OpenAI Realtime</span><span class="tp">Stream Video SDK</span><span class="tp">Inngest</span>
-        <span class="tp">Next.js</span><span class="tp">TypeScript</span><span class="tp">tRPC</span><span class="tp">PostgreSQL</span><span class="tp">OpenTelemetry</span>
+        <span class="tp">Next.js</span><span class="tp">TypeScript</span><span class="tp">tRPC</span><span class="tp">PostgreSQL</span>
       </div>
       <div class="pcard-body">
         <div class="pcard-content">
-          <p class="pdesc">Real-time voice agent combining OpenAI Realtime API and Stream Video SDK for live speech-to-text summarization. Features Inngest-based asynchronous orchestration with idempotent retries, a multi-tenant backend with isolated reporting, and end-to-end OpenTelemetry performance tracing.</p>
+          <p class="pdesc">Real-time voice agent prototype combining OpenAI Realtime API and Stream Video SDK for live speech-to-text summarization. Features Inngest-based asynchronous orchestration, a local multi-tenant backend with isolated reporting, and request tracing integrations.</p>
           <div class="metrics">
             <div class="metric"><span class="mv" data-count="250" data-suffix="ms">—</span><span class="ml">STT Latency</span></div>
             <div class="metric"><span class="mv" data-count="98" data-suffix="%">—</span><span class="ml">Transcription Acc.</span></div>
-            <div class="metric"><span class="mv" data-static="true">99.9%</span><span class="ml">Agent Uptime</span></div>
-            <div class="metric"><span class="mv" data-static="true">OpenTelemetry</span><span class="ml">Inference Tracing</span></div>
+            <div class="metric"><span class="mv" data-static="true">99%</span><span class="ml">Success Rate</span></div>
+            <div class="metric"><span class="mv" data-static="true">Active</span><span class="ml">Request Tracing</span></div>
           </div>
         </div>
         <div class="pcard-vis" aria-label="Agent metrics: Accuracy 98%, Response 95%, Uptime 99%">
@@ -111,7 +111,7 @@
       </div>
       <div class="pcard-body">
         <div class="pcard-content">
-          <p class="pdesc">Agentic code generation SaaS leveraging Gemini 2.0. Runs generated code inside isolated E2B sandboxes for automated validation before delivery. Utilizes Inngest async queues with durable retries for long-running workflows and enforces structured outputs and token usage metering.</p>
+          <p class="pdesc">Agentic code generation prototype leveraging Gemini 2.0. Runs generated code inside isolated E2B sandboxes for automated validation before delivery. Utilizes Inngest async queues for testing long-running workflows, enforcing structured outputs, and monitoring token usage.</p>
           <div class="metrics">
             <div class="metric"><span class="mv" data-count="100" data-suffix="%">—</span><span class="ml">Sandbox Isolation</span></div>
             <div class="metric"><span class="mv" data-static="true">Inngest</span><span class="ml">Durable Queues</span></div>
@@ -154,16 +154,16 @@
       </div>
       <div class="tech-row">
         <span class="tp">Twilio WebSockets</span><span class="tp">Deepgram STT</span><span class="tp">Function Calling</span>
-        <span class="tp">Docker</span><span class="tp">Kubernetes</span>
+        <span class="tp">Docker</span>
       </div>
       <div class="pcard-body">
         <div class="pcard-content">
-          <p class="pdesc">End-to-end pharmacy voice assistant receiving audio streams over Twilio WebSockets and transcribing via Deepgram STT. Orchestrates inquiries with LLM function-calling workflows, maintaining sub-2.5s response times with audio frame tuning. Deployed on Kubernetes.</p>
+          <p class="pdesc">End-to-end pharmacy voice assistant receiving audio streams over Twilio WebSockets and transcribing via Deepgram STT. Orchestrates inquiries with LLM function-calling workflows, maintaining sub-2.5s response times with audio frame tuning. Containerized with Docker for local testing.</p>
           <div class="metrics">
             <div class="metric"><span class="mv" data-static="true">1.5s</span><span class="ml">p50 Latency</span></div>
             <div class="metric"><span class="mv" data-static="true">2.5s</span><span class="ml">p95 Latency</span></div>
             <div class="metric"><span class="mv" data-count="20" data-suffix="ms">—</span><span class="ml">Audio Frame Size</span></div>
-            <div class="metric"><span class="mv" data-static="true">Kubernetes</span><span class="ml">Scale Deployed</span></div>
+            <div class="metric"><span class="mv" data-static="true">Docker</span><span class="ml">Local Container</span></div>
           </div>
         </div>
         <div class="pcard-vis" aria-label="Pipeline flow: Twilio stream -> Deepgram STT -> LLM response -> Client output">
@@ -188,7 +188,7 @@
             <rect x="170" y="24" width="34" height="36" fill="#c8690a" rx="4"/>
             <text x="187" y="39" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="7"  fill="rgba(255,255,255,0.7)">AUDIO</text>
             <text x="187" y="51" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8"  fill="#ffffff">Barge-in</text>
-            <text x="105" y="76" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8" fill="#5a6070">Twilio  ·  Deepgram  ·  Kubernetes  ·  Docker</text>
+            <text x="105" y="76" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8" fill="#5a6070">Twilio  ·  Deepgram  ·  Docker</text>
           </svg>
         </div>
       </div>
@@ -206,7 +206,7 @@
         <span class="mcard-tag">Data Engineering · ETL</span>
         <h4 class="mtitle">Python/SQL ETL Pipelines</h4>
         <div class="tech-row"><span class="tp">Python</span><span class="tp">SQL</span><span class="tp">PostgreSQL</span></div>
-        <p class="mdesc">Standardized schemas, added idempotent retries, and implemented checksum validations across complex datasets to eliminate manual cleaning.</p>
+        <p class="mdesc">Developed local Python/SQL scripts to parse schemas, test retry mechanisms, and run validations across raw datasets to prepare them for integration.</p>
       </div>
     </article>
 
@@ -214,9 +214,9 @@
       <div class="mcard-accent" aria-hidden="true"></div>
       <div class="mcard-inner">
         <span class="mcard-tag">Observability · Logging</span>
-        <h4 class="mtitle">OpenTelemetry Logging Agent</h4>
-        <div class="tech-row"><span class="tp">Node.js</span><span class="tp">Python</span><span class="tp">OpenTelemetry</span></div>
-        <p class="mdesc">Custom wrapper library providing uniform API log structures and performance tracing across microservices.</p>
+        <h4 class="mtitle">Structured Logging Agent</h4>
+        <div class="tech-row"><span class="tp">Node.js</span><span class="tp">Python</span></div>
+        <p class="mdesc">Developed wrapper scripts providing uniform API log structures and performance tracing across development microservices.</p>
       </div>
     </article>
 
@@ -226,7 +226,7 @@
         <span class="mcard-tag">CI/CD · AI Evaluation</span>
         <h4 class="mtitle">DeepEval Gating Pipeline</h4>
         <div class="tech-row"><span class="tp">Python</span><span class="tp">DeepEval</span><span class="tp">GitHub Actions</span></div>
-        <p class="mdesc">Automated CI/CD workflows executing hallucination and citation-coverage tests during staging builds.</p>
+        <p class="mdesc">Configured local and CI/CD test actions executing hallucination and citation-coverage evaluations during test builds.</p>
       </div>
     </article>
 

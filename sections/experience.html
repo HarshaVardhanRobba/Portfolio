@@ -2,11 +2,13 @@
   <div class="sec-header fi">
     <h2 class="sec-title">Professional Experience</h2>
     <div class="sec-bar"></div>
+    <div class="ghost-year" id="ghostYear" aria-hidden="true">2023</div>
   </div>
 
-  <div class="timeline">
+  <div class="timeline" id="timeline">
+    <span class="tl-line" aria-hidden="true"><span class="tl-fill" id="tlFill"></span></span>
 
-    <article class="tcard fi">
+    <article class="tcard fi" data-year="2023">
       <div class="thead">
         <div>
           <div class="t-role">Software Engineer Intern — Backend Platform &amp; Integrations</div>
@@ -15,14 +17,14 @@
         <div class="t-meta"><div>Jul 2023 – Dec 2023</div></div>
       </div>
       <ul class="t-list">
-        <li>Scaled Node.js API platform from 0 to 1,000+ users by containerizing services with Docker, enabling consistent deployments and reducing environment-related incidents</li>
-        <li>Diagnosed p95 latency regression, profiling PostgreSQL query plans, rewriting 3 high-cost joins, and adding targeted indexes to restore baseline response times</li>
-        <li>Collaborated with Product and external stakeholders to define platform workflow contracts and documented API specifications adopted across two integration partners</li>
-        <li>Instrumented critical API paths with OpenTelemetry traces, metrics, and structured logs, delivering first end-to-end request visibility and reducing mean time-to-detect issues</li>
+        <li>Developed and containerized Node.js API services with Docker, establishing consistent local development and staging environments</li>
+        <li>Optimized development database performance by profiling PostgreSQL query plans, rewriting high-cost joins, and testing index configurations</li>
+        <li>Configured CI/CD automation pipelines for staging branch test runs, reducing deployment bugs and improving developer feedback speed</li>
+        <li>Instrumented backend API routes with structured logging and request tracing, facilitating local request tracking and debugging</li>
       </ul>
     </article>
 
-    <article class="tcard fi">
+    <article class="tcard fi" data-year="2022">
       <div class="thead">
         <div>
           <div class="t-role">Data Engineering Intern — Data Pipelines &amp; Quality</div>
