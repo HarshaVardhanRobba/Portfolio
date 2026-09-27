@@ -654,6 +654,7 @@ html:not(.js-loaded) .scroll-mouse { opacity: 1; }
   .scroll-mouse { display: none; }
   .handle-label { font-size: 13px; left: 50%; top: calc(100% - 2px); transform: translateX(-50%); }
   .ghost-num { top: 25%; right: 6%; font-size: 22vw; }
+  .radar-svg-wrap text:not([fill="#e8e0d0"]) { font-size: 14px; }
   .mini-grid { grid-template-columns: minmax(0, 1fr); }
   .metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .t-meta { white-space: normal; }
