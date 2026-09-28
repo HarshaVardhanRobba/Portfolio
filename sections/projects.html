@@ -6,48 +6,50 @@
 
   <div class="proj-stack">
 
-    <!-- ── Project 1: Brand Guardian AI ── -->
+    <!-- ── Project 1: web-base ── -->
     <article class="pcard fi">
       <div class="pcard-header">
-        <span class="pcard-tag">Computer Vision · LLMs · RAG</span>
+        <span class="pcard-tag">Workflow Automation · Browser Agents</span>
         <span class="pcard-num" aria-hidden="true">01</span>
       </div>
       <div class="ptop">
-        <h3 class="ptitle">Brand Guardian AI — Video Compliance Auditing Platform</h3>
+        <h3 class="ptitle">web-base — Multi-Tenant Workflow Builder</h3>
       </div>
       <div class="tech-row">
-        <span class="tp">LangGraph</span><span class="tp">Azure OpenAI</span><span class="tp">Azure AI Search</span>
-        <span class="tp">Azure Video Indexer</span><span class="tp">RAG</span><span class="tp">DeepEval</span><span class="tp">CI/CD</span>
+        <span class="tp">Next.js 16</span><span class="tp">React 19</span><span class="tp">Clerk</span>
+        <span class="tp">Neon Postgres</span><span class="tp">Drizzle ORM</span><span class="tp">Trigger.dev</span>
+        <span class="tp">Browserbase</span><span class="tp">React Flow</span><span class="tp">Liveblocks</span>
       </div>
       <div class="pcard-body">
         <div class="pcard-content">
-          <p class="pdesc">Multi-step LangGraph RAG pipeline ingesting compliance videos to extract timestamped evidence via Azure Video Indexer. Grounds all findings in cited retrieval results on Azure AI Search with full citation tracking. Integrates DeepEval hallucination and citation-coverage metrics directly into testing pipelines with CI/CD automation, utilizing LLM guardrails.</p>
+          <p class="pdesc">Multi-tenant workflow builder where each organization owns a set of workflows built on a React Flow node editor. Runs execute as durable Trigger.dev tasks driving a cloud Browserbase browser, with progress streaming back into a Liveblocks-synced canvas in realtime.</p>
+          <p class="plive"><a href="https://web-base-workflow.vercel.app/" target="_blank" rel="noopener">Live: web-base-workflow.vercel.app</a></p>
           <div class="metrics">
-            <div class="metric"><span class="mv" data-count="95" data-suffix="%">—</span><span class="ml">Hallucination Reduction</span></div>
-            <div class="metric"><span class="mv" data-count="100" data-suffix="%">—</span><span class="ml">Grounded Citations</span></div>
-            <div class="metric"><span class="mv" data-static="true">DeepEval</span><span class="ml">CI/CD Integration</span></div>
-            <div class="metric"><span class="mv" data-static="true">Zero</span><span class="ml">Unattributed Claims</span></div>
+            <div class="metric"><span class="mv" data-static="true">Trigger.dev</span><span class="ml">Durable Task Runs</span></div>
+            <div class="metric"><span class="mv" data-static="true">Browserbase</span><span class="ml">Cloud Browser Agent</span></div>
+            <div class="metric"><span class="mv" data-static="true">Liveblocks</span><span class="ml">Realtime Canvas Sync</span></div>
+            <div class="metric"><span class="mv" data-static="true">Clerk</span><span class="ml">Org-Scoped Tenancy</span></div>
           </div>
         </div>
-        <div class="pcard-vis" aria-label="Compliance matrix: TP 94, FP 6, FN 4, TN 96">
-          <svg viewBox="0 0 220 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <text x="110" y="12" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="10" fill="#1a1f3a" letter-spacing="0.05em">COMPLIANCE MATRIX</text>
-            <text x="88"  y="26" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="7" fill="#5a6070">Pred Compliant</text>
-            <text x="172" y="26" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="7" fill="#5a6070">Pred Flagged</text>
-            <text x="10" y="72"  text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="7" fill="#5a6070" transform="rotate(-90,10,72)">Actual Compliant</text>
-            <text x="10" y="128" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="7" fill="#5a6070" transform="rotate(-90,10,128)">Actual Flagged</text>
-            <rect x="28" y="30" width="84" height="52" fill="rgba(200,105,10,0.88)" rx="4"/>
-            <text x="70" y="52" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8"  fill="rgba(255,255,255,0.7)">TP</text>
-            <text x="70" y="68" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="18" fill="#ffffff" font-weight="500">94</text>
-            <rect x="118" y="30" width="84" height="52" fill="#e8e0d0" rx="4"/>
-            <text x="160" y="52" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8"  fill="#5a6070">FP</text>
-            <text x="160" y="68" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="18" fill="#1a1f3a" font-weight="500">6</text>
-            <rect x="28" y="88" width="84" height="52" fill="#e8e0d0" rx="4"/>
-            <text x="70" y="110" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8"  fill="#5a6070">FN</text>
-            <text x="70" y="126" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="18" fill="#1a1f3a" font-weight="500">4</text>
-            <rect x="118" y="88" width="84" height="52" fill="rgba(200,105,10,0.45)" rx="4"/>
-            <text x="160" y="110" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8"  fill="rgba(255,255,255,0.8)">TN</text>
-            <text x="160" y="126" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="18" fill="#ffffff" font-weight="500">96</text>
+        <div class="pcard-vis" aria-label="Architecture flow: React Flow Canvas → Trigger.dev Task → Browserbase Session">
+          <svg viewBox="0 0 210 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <text x="105" y="13" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="10" fill="#1a1f3a" letter-spacing="0.05em">ARCHITECTURE</text>
+            <rect x="8"   y="28" width="56" height="36" fill="#f5f0e8" stroke="#c8690a" stroke-width="1.5" rx="4"/>
+            <text x="36"  y="44" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="7"  fill="#1a1f3a">React Flow</text>
+            <text x="36"  y="56" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8"  fill="#c8690a">Canvas</text>
+            <line x1="64" y1="46" x2="76" y2="46" stroke="#5a6070" stroke-width="1.5" stroke-dasharray="3,2"/>
+            <polygon points="74,42 82,46 74,50" fill="#5a6070"/>
+            <rect x="77"  y="28" width="56" height="36" fill="#f5f0e8" stroke="#c8690a" stroke-width="1.5" rx="4"/>
+            <text x="105" y="44" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8"  fill="#1a1f3a">Trigger.dev</text>
+            <text x="105" y="56" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8"  fill="#c8690a">Task</text>
+            <line x1="133" y1="46" x2="145" y2="46" stroke="#5a6070" stroke-width="1.5" stroke-dasharray="3,2"/>
+            <polygon points="143,42 151,46 143,50" fill="#5a6070"/>
+            <rect x="146" y="28" width="56" height="36" fill="#1a1f3a" stroke="#1a1f3a" stroke-width="1.5" rx="4"/>
+            <text x="174" y="44" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8"  fill="#f5f0e8">Browser-</text>
+            <text x="174" y="56" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8"  fill="#c8690a">base</text>
+            <text x="36"  y="80" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="7" fill="#5a6070">Graph Editor</text>
+            <text x="105" y="80" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="7" fill="#5a6070">Durable Run</text>
+            <text x="174" y="80" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="7" fill="#5a6070">Live Session</text>
           </svg>
         </div>
       </div>
@@ -69,6 +71,7 @@
       <div class="pcard-body">
         <div class="pcard-content">
           <p class="pdesc">Real-time voice agent prototype combining OpenAI Realtime API and Stream Video SDK for live speech-to-text summarization. Features Inngest-based asynchronous orchestration, a local multi-tenant backend with isolated reporting, and request tracing integrations.</p>
+          <p class="plive"><a href="https://elaravoiceai.onrender.com" target="_blank" rel="noopener">Live: elaravoiceai.onrender.com</a></p>
           <div class="metrics">
             <div class="metric"><span class="mv" data-count="250" data-suffix="ms">—</span><span class="ml">STT Latency</span></div>
             <div class="metric"><span class="mv" data-count="98" data-suffix="%">—</span><span class="ml">Transcription Acc.</span></div>
@@ -112,6 +115,7 @@
       <div class="pcard-body">
         <div class="pcard-content">
           <p class="pdesc">Agentic code generation prototype leveraging Gemini 2.0. Runs generated code inside isolated E2B sandboxes for automated validation before delivery. Utilizes Inngest async queues for testing long-running workflows, enforcing structured outputs, and monitoring token usage.</p>
+          <p class="plive"><a href="https://websito-eight.vercel.app/" target="_blank" rel="noopener">Live: websito-eight.vercel.app</a></p>
           <div class="metrics">
             <div class="metric"><span class="mv" data-count="100" data-suffix="%">—</span><span class="ml">Sandbox Isolation</span></div>
             <div class="metric"><span class="mv" data-static="true">Inngest</span><span class="ml">Durable Queues</span></div>
