@@ -6,24 +6,116 @@
 
   <div class="proj-stack">
 
-    <!-- ── Project 1: web-base ── -->
+    <!-- ── Project 1: Smart Mapping ── -->
     <article class="pcard fi">
       <div class="pcard-header">
-        <span class="pcard-tag">Workflow Automation · Browser Agents</span>
+        <span class="pcard-tag">Hybrid RAG · BigQuery &amp; Gemini</span>
         <span class="pcard-num" aria-hidden="true">01</span>
       </div>
       <div class="ptop">
-        <h3 class="ptitle">web-base — Multi-Tenant Workflow Builder</h3>
+        <h3 class="ptitle">Smart Mapping — Catalog Service Code Mapping Engine</h3>
       </div>
       <div class="tech-row">
-        <span class="tp">Next.js 16</span><span class="tp">React 19</span><span class="tp">Clerk</span>
-        <span class="tp">Neon Postgres</span><span class="tp">Drizzle ORM</span><span class="tp">Trigger.dev</span>
-        <span class="tp">Browserbase</span><span class="tp">React Flow</span><span class="tp">Liveblocks</span>
+        <span class="tp">Python</span><span class="tp">RAG</span><span class="tp">Gemini</span>
+        <span class="tp">BigQuery</span><span class="tp">GCP Cloud Run</span><span class="tp">Docker</span>
       </div>
       <div class="pcard-body">
         <div class="pcard-content">
-          <p class="pdesc">Multi-tenant workflow builder where each organization owns a set of workflows built on a React Flow node editor. Runs execute as durable Trigger.dev tasks driving a cloud Browserbase browser, with progress streaming back into a Liveblocks-synced canvas in realtime.</p>
-          <p class="plive"><a href="https://web-base-workflow.vercel.app/" target="_blank" rel="noopener">Live: web-base-workflow.vercel.app</a></p>
+          <p class="pdesc">Architected a hybrid RAG pipeline that maps acquired brands' service codes to a parent company's canonical catalog: BigQuery vector search and TF-IDF candidates feed a Gemini re-ranker, with rules advising and confidence gating a human. Productionized on GCP with Docker, Cloud Run Jobs, and a BigQuery audit schema with per-run cost tracking, onboarding 20 acquired brands with zero processing errors and an estimated 30 to 60 times speedup over manual mapping.</p>
+          <div class="metrics">
+            <div class="metric"><span class="mv" data-static="true">30-60x</span><span class="ml">Mapping Speedup</span></div>
+            <div class="metric"><span class="mv" data-count="20" data-suffix="">—</span><span class="ml">Acquired Brands</span></div>
+            <div class="metric"><span class="mv" data-static="true">0</span><span class="ml">Processing Errors</span></div>
+            <div class="metric"><span class="mv" data-static="true">Gemini</span><span class="ml">Reranker &amp; Audit</span></div>
+          </div>
+        </div>
+        <div class="pcard-vis" aria-label="Pipeline: BigQuery Vector Search &amp; TF-IDF → Gemini Re-ranker → Canonical Catalog">
+          <svg viewBox="0 0 210 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <text x="105" y="13" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="10" fill="#1a1f3a" letter-spacing="0.05em">RAG PIPELINE</text>
+            <rect x="8" y="28" width="56" height="36" fill="#f5f0e8" stroke="#c8690a" stroke-width="1.5" rx="4"/>
+            <text x="36" y="44" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="7" fill="#1a1f3a">BigQuery</text>
+            <text x="36" y="56" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8" fill="#c8690a">Vector+TFIDF</text>
+            <line x1="64" y1="46" x2="76" y2="46" stroke="#5a6070" stroke-width="1.5" stroke-dasharray="3,2"/>
+            <polygon points="74,42 82,46 74,50" fill="#5a6070"/>
+            <rect x="77" y="28" width="56" height="36" fill="#f5f0e8" stroke="#c8690a" stroke-width="1.5" rx="4"/>
+            <text x="105" y="44" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8" fill="#1a1f3a">Gemini</text>
+            <text x="105" y="56" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8" fill="#c8690a">Reranker</text>
+            <line x1="133" y1="46" x2="145" y2="46" stroke="#5a6070" stroke-width="1.5" stroke-dasharray="3,2"/>
+            <polygon points="143,42 151,46 143,50" fill="#5a6070"/>
+            <rect x="146" y="28" width="56" height="36" fill="#1a1f3a" stroke="#1a1f3a" stroke-width="1.5" rx="4"/>
+            <text x="174" y="44" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8" fill="#f5f0e8">Canonical</text>
+            <text x="174" y="56" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8" fill="#c8690a">Catalog</text>
+            <text x="36" y="80" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="7" fill="#5a6070">Raw Codes</text>
+            <text x="105" y="80" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="7" fill="#5a6070">Confidence Gate</text>
+            <text x="174" y="80" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="7" fill="#5a6070">Cloud Run Job</text>
+          </svg>
+        </div>
+      </div>
+    </article>
+
+    <!-- ── Project 2: AI Match Resolution Workbench ── -->
+    <article class="pcard fi">
+      <div class="pcard-header">
+        <span class="pcard-tag">Agentic Data Steward · MCP</span>
+        <span class="pcard-num" aria-hidden="true">02</span>
+      </div>
+      <div class="ptop">
+        <h3 class="ptitle">AI Match Resolution Workbench — Enterprise Entity Reconciliation</h3>
+      </div>
+      <div class="tech-row">
+        <span class="tp">Python</span><span class="tp">FastAPI</span><span class="tp">Azure OpenAI</span>
+        <span class="tp">MCP</span><span class="tp">Service Bus</span><span class="tp">Reltio</span>
+      </div>
+      <div class="pcard-body">
+        <div class="pcard-content">
+          <p class="pdesc">Engineered an agentic data steward where an LLM agent reasons over the Reltio MCP server (100+ tools) to merge, reject, or defer matches with human-in-the-loop review and a full audit trail. Scaled analysis horizontally with competing consumers on Azure Service Bus, cut LLM cost and latency with fleet-wide prompt caching, and made irreversible merges idempotent and retry-safe.</p>
+          <div class="metrics">
+            <div class="metric"><span class="mv" data-static="true">100+</span><span class="ml">MCP Server Tools</span></div>
+            <div class="metric"><span class="mv" data-static="true">Cached</span><span class="ml">Prompt Caching</span></div>
+            <div class="metric"><span class="mv" data-static="true">HITL</span><span class="ml">Audit Trail</span></div>
+            <div class="metric"><span class="mv" data-static="true">Azure</span><span class="ml">Service Bus Queue</span></div>
+          </div>
+        </div>
+        <div class="pcard-vis" aria-label="Workflow: Reltio MCP Server → LLM Agent → Azure Service Bus → Human Review">
+          <svg viewBox="0 0 210 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <text x="105" y="13" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="10" fill="#1a1f3a" letter-spacing="0.05em">AGENTIC STEWARD</text>
+            <rect x="8" y="28" width="56" height="36" fill="#f5f0e8" stroke="#c8690a" stroke-width="1.5" rx="4"/>
+            <text x="36" y="44" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8" fill="#1a1f3a">Reltio</text>
+            <text x="36" y="56" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8" fill="#c8690a">MCP 100+</text>
+            <line x1="64" y1="46" x2="76" y2="46" stroke="#5a6070" stroke-width="1.5" stroke-dasharray="3,2"/>
+            <polygon points="74,42 82,46 74,50" fill="#5a6070"/>
+            <rect x="77" y="28" width="56" height="36" fill="#1a1f3a" stroke="#1a1f3a" stroke-width="1.5" rx="4"/>
+            <text x="105" y="44" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8" fill="#f5f0e8">Azure LLM</text>
+            <text x="105" y="56" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8" fill="#c8690a">Agent</text>
+            <line x1="133" y1="46" x2="145" y2="46" stroke="#5a6070" stroke-width="1.5" stroke-dasharray="3,2"/>
+            <polygon points="143,42 151,46 143,50" fill="#5a6070"/>
+            <rect x="146" y="28" width="56" height="36" fill="#f5f0e8" stroke="#c8690a" stroke-width="1.5" rx="4"/>
+            <text x="174" y="44" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8" fill="#1a1f3a">HITL</text>
+            <text x="174" y="56" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8" fill="#c8690a">Audit Safe</text>
+            <text x="36" y="80" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="7" fill="#5a6070">Tool Protocol</text>
+            <text x="105" y="80" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="7" fill="#5a6070">Prompt Caching</text>
+            <text x="174" y="80" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="7" fill="#5a6070">Service Bus</text>
+          </svg>
+        </div>
+      </div>
+    </article>
+
+    <!-- ── Project 3: Web-base ── -->
+    <article class="pcard fi">
+      <div class="pcard-header">
+        <span class="pcard-tag">Workflow Automation · Browser Agents</span>
+        <span class="pcard-num" aria-hidden="true">03</span>
+      </div>
+      <div class="ptop">
+        <h3 class="ptitle">Web-base — Multi-Tenant Workflow &amp; Browser Automation</h3>
+      </div>
+      <div class="tech-row">
+        <span class="tp">Next.js</span><span class="tp">React Flow</span><span class="tp">Liveblocks</span>
+        <span class="tp">Trigger.dev</span><span class="tp">Browserbase</span><span class="tp">Clerk</span>
+      </div>
+      <div class="pcard-body">
+        <div class="pcard-content">
+          <p class="pdesc">Orchestrated each workflow node as a durable Trigger.dev task that survives multi-minute browser steps and halts at the first failed step; streamed live runs through Browserbase and Stagehand. Enforced tenant isolation under Clerk organizations by filtering every database query on organization ID.</p>
           <div class="metrics">
             <div class="metric"><span class="mv" data-static="true">Trigger.dev</span><span class="ml">Durable Task Runs</span></div>
             <div class="metric"><span class="mv" data-static="true">Browserbase</span><span class="ml">Cloud Browser Agent</span></div>
@@ -34,20 +126,20 @@
         <div class="pcard-vis" aria-label="Architecture flow: React Flow Canvas → Trigger.dev Task → Browserbase Session">
           <svg viewBox="0 0 210 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <text x="105" y="13" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="10" fill="#1a1f3a" letter-spacing="0.05em">ARCHITECTURE</text>
-            <rect x="8"   y="28" width="56" height="36" fill="#f5f0e8" stroke="#c8690a" stroke-width="1.5" rx="4"/>
-            <text x="36"  y="44" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="7"  fill="#1a1f3a">React Flow</text>
-            <text x="36"  y="56" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8"  fill="#c8690a">Canvas</text>
+            <rect x="8" y="28" width="56" height="36" fill="#f5f0e8" stroke="#c8690a" stroke-width="1.5" rx="4"/>
+            <text x="36" y="44" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="7" fill="#1a1f3a">React Flow</text>
+            <text x="36" y="56" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8" fill="#c8690a">Canvas</text>
             <line x1="64" y1="46" x2="76" y2="46" stroke="#5a6070" stroke-width="1.5" stroke-dasharray="3,2"/>
             <polygon points="74,42 82,46 74,50" fill="#5a6070"/>
-            <rect x="77"  y="28" width="56" height="36" fill="#f5f0e8" stroke="#c8690a" stroke-width="1.5" rx="4"/>
-            <text x="105" y="44" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8"  fill="#1a1f3a">Trigger.dev</text>
-            <text x="105" y="56" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8"  fill="#c8690a">Task</text>
+            <rect x="77" y="28" width="56" height="36" fill="#f5f0e8" stroke="#c8690a" stroke-width="1.5" rx="4"/>
+            <text x="105" y="44" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8" fill="#1a1f3a">Trigger.dev</text>
+            <text x="105" y="56" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8" fill="#c8690a">Task</text>
             <line x1="133" y1="46" x2="145" y2="46" stroke="#5a6070" stroke-width="1.5" stroke-dasharray="3,2"/>
             <polygon points="143,42 151,46 143,50" fill="#5a6070"/>
             <rect x="146" y="28" width="56" height="36" fill="#1a1f3a" stroke="#1a1f3a" stroke-width="1.5" rx="4"/>
-            <text x="174" y="44" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8"  fill="#f5f0e8">Browser-</text>
-            <text x="174" y="56" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8"  fill="#c8690a">base</text>
-            <text x="36"  y="80" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="7" fill="#5a6070">Graph Editor</text>
+            <text x="174" y="44" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8" fill="#f5f0e8">Browser-</text>
+            <text x="174" y="56" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8" fill="#c8690a">base</text>
+            <text x="36" y="80" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="7" fill="#5a6070">Graph Editor</text>
             <text x="105" y="80" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="7" fill="#5a6070">Durable Run</text>
             <text x="174" y="80" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="7" fill="#5a6070">Live Session</text>
           </svg>
@@ -55,144 +147,52 @@
       </div>
     </article>
 
-    <!-- ── Project 2: Elara ── -->
+    <!-- ── Project 4: Elara ── -->
     <article class="pcard fi">
       <div class="pcard-header">
-        <span class="pcard-tag">Real-Time Streaming · AI Agent</span>
-        <span class="pcard-num" aria-hidden="true">02</span>
+        <span class="pcard-tag">Real-Time Voice AI · Streaming</span>
+        <span class="pcard-num" aria-hidden="true">04</span>
       </div>
       <div class="ptop">
         <h3 class="ptitle">Elara — Real-Time AI Meeting Voice Agent</h3>
       </div>
       <div class="tech-row">
-        <span class="tp">OpenAI Realtime</span><span class="tp">Stream Video SDK</span><span class="tp">Inngest</span>
-        <span class="tp">Next.js</span><span class="tp">TypeScript</span><span class="tp">tRPC</span><span class="tp">PostgreSQL</span>
+        <span class="tp">Stream Video SDK</span><span class="tp">OpenAI Realtime</span><span class="tp">Inngest</span>
+        <span class="tp">Drizzle ORM</span><span class="tp">Neon PostgreSQL</span>
       </div>
       <div class="pcard-body">
         <div class="pcard-content">
-          <p class="pdesc">Real-time voice agent prototype combining OpenAI Realtime API and Stream Video SDK for live speech-to-text summarization. Features Inngest-based asynchronous orchestration, a local multi-tenant backend with isolated reporting, and request tracing integrations.</p>
-          <p class="plive"><a href="https://elaravoiceai.onrender.com" target="_blank" rel="noopener">Live: elaravoiceai.onrender.com</a></p>
+          <p class="pdesc">Achieved one-way voice latency near 500 ms on the OpenAI Realtime path, keeping the agent responsive in a live call. Offloaded summarization to Inngest background jobs with automatic retries, ending transcript loss at the request timeout and delivering summaries in 5 to 12 seconds.</p>
           <div class="metrics">
-            <div class="metric"><span class="mv" data-count="250" data-suffix="ms">—</span><span class="ml">STT Latency</span></div>
-            <div class="metric"><span class="mv" data-count="98" data-suffix="%">—</span><span class="ml">Transcription Acc.</span></div>
-            <div class="metric"><span class="mv" data-static="true">99%</span><span class="ml">Success Rate</span></div>
-            <div class="metric"><span class="mv" data-static="true">Active</span><span class="ml">Request Tracing</span></div>
+            <div class="metric"><span class="mv" data-static="true">~500ms</span><span class="ml">Voice Latency</span></div>
+            <div class="metric"><span class="mv" data-static="true">5-12s</span><span class="ml">Summary Delivery</span></div>
+            <div class="metric"><span class="mv" data-static="true">Inngest</span><span class="ml">Auto Retries</span></div>
+            <div class="metric"><span class="mv" data-static="true">Zero</span><span class="ml">Transcript Loss</span></div>
           </div>
         </div>
-        <div class="pcard-vis" aria-label="Agent metrics: Accuracy 98%, Response 95%, Uptime 99%">
-          <svg viewBox="0 0 210 110" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <text x="105" y="13" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="10" fill="#1a1f3a" letter-spacing="0.05em">AGENT METRICS</text>
-            <text x="54" y="35" text-anchor="end" font-family="'IBM Plex Mono',monospace" font-size="9" fill="#5a6070">Accuracy</text>
-            <rect x="60" y="22" width="130" height="16" fill="#e8e0d0" rx="2"/>
-            <rect x="60" y="22" width="127" height="16" fill="#c8690a" rx="2"/>
-            <text x="197" y="34" text-anchor="start" font-family="'IBM Plex Mono',monospace" font-size="9" fill="#c8690a">98%</text>
-            <text x="54" y="65" text-anchor="end" font-family="'IBM Plex Mono',monospace" font-size="9" fill="#5a6070">Response</text>
-            <rect x="60" y="52" width="130" height="16" fill="#e8e0d0" rx="2"/>
-            <rect x="60" y="52" width="123" height="16" fill="#c8690a" rx="2"/>
-            <text x="197" y="64" text-anchor="start" font-family="'IBM Plex Mono',monospace" font-size="9" fill="#c8690a">95%</text>
-            <text x="54" y="95" text-anchor="end" font-family="'IBM Plex Mono',monospace" font-size="9" fill="#5a6070">Uptime</text>
-            <rect x="60" y="82" width="130" height="16" fill="#e8e0d0" rx="2"/>
-            <rect x="60" y="82" width="129" height="16" fill="#c8690a" rx="2"/>
-            <text x="197" y="94" text-anchor="start" font-family="'IBM Plex Mono',monospace" font-size="9" fill="#c8690a">99%</text>
-          </svg>
-        </div>
-      </div>
-    </article>
-
-    <!-- ── Project 3: Websito ── -->
-    <article class="pcard fi">
-      <div class="pcard-header">
-        <span class="pcard-tag">Agentic SaaS · Code Generation</span>
-        <span class="pcard-num" aria-hidden="true">03</span>
-      </div>
-      <div class="ptop">
-        <h3 class="ptitle">Websito — Agentic Code Generation SaaS</h3>
-      </div>
-      <div class="tech-row">
-        <span class="tp">Next.js</span><span class="tp">Gemini 2.0</span><span class="tp">LLM Agents</span>
-        <span class="tp">Inngest</span><span class="tp">E2B Sandbox</span><span class="tp">PostgreSQL</span><span class="tp">Prisma</span>
-      </div>
-      <div class="pcard-body">
-        <div class="pcard-content">
-          <p class="pdesc">Agentic code generation prototype leveraging Gemini 2.0. Runs generated code inside isolated E2B sandboxes for automated validation before delivery. Utilizes Inngest async queues for testing long-running workflows, enforcing structured outputs, and monitoring token usage.</p>
-          <p class="plive"><a href="https://websito-eight.vercel.app/" target="_blank" rel="noopener">Live: websito-eight.vercel.app</a></p>
-          <div class="metrics">
-            <div class="metric"><span class="mv" data-count="100" data-suffix="%">—</span><span class="ml">Sandbox Isolation</span></div>
-            <div class="metric"><span class="mv" data-static="true">Inngest</span><span class="ml">Durable Queues</span></div>
-            <div class="metric"><span class="mv" data-static="true">Gemini 2.0</span><span class="ml">Structured Out</span></div>
-            <div class="metric"><span class="mv" data-static="true">Prisma</span><span class="ml">Usage Metering</span></div>
-          </div>
-        </div>
-        <div class="pcard-vis" aria-label="Architecture flow: Gemini 2.0 Agent → Inngest Queue → E2B Sandbox">
-          <svg viewBox="0 0 210 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <text x="105" y="13" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="10" fill="#1a1f3a" letter-spacing="0.05em">ARCHITECTURE</text>
-            <rect x="8"   y="28" width="56" height="36" fill="#f5f0e8" stroke="#c8690a" stroke-width="1.5" rx="4"/>
-            <text x="36"  y="44" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="7"  fill="#1a1f3a">Gemini 2.0</text>
-            <text x="36"  y="56" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8"  fill="#c8690a">Agent</text>
-            <line x1="64" y1="46" x2="76" y2="46" stroke="#5a6070" stroke-width="1.5" stroke-dasharray="3,2"/>
-            <polygon points="74,42 82,46 74,50" fill="#5a6070"/>
-            <rect x="77"  y="28" width="56" height="36" fill="#f5f0e8" stroke="#c8690a" stroke-width="1.5" rx="4"/>
-            <text x="105" y="44" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8"  fill="#1a1f3a">Inngest</text>
-            <text x="105" y="56" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8"  fill="#c8690a">Queue</text>
-            <line x1="133" y1="46" x2="145" y2="46" stroke="#5a6070" stroke-width="1.5" stroke-dasharray="3,2"/>
-            <polygon points="143,42 151,46 143,50" fill="#5a6070"/>
-            <rect x="146" y="28" width="56" height="36" fill="#1a1f3a" stroke="#1a1f3a" stroke-width="1.5" rx="4"/>
-            <text x="174" y="44" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8"  fill="#f5f0e8">E2B</text>
-            <text x="174" y="56" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8"  fill="#c8690a">Sandbox</text>
-            <text x="36"  y="80" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="7" fill="#5a6070">Tool-calling</text>
-            <text x="105" y="80" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="7" fill="#5a6070">Durable Retries</text>
-            <text x="174" y="80" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="7" fill="#5a6070">Test Run</text>
-          </svg>
-        </div>
-      </div>
-    </article>
-
-    <!-- ── Project 4: Real-Time Pharmacy Voice Agent ── -->
-    <article class="pcard fi">
-      <div class="pcard-header">
-        <span class="pcard-tag">Streaming &amp; Voice · Containerization</span>
-        <span class="pcard-num" aria-hidden="true">04</span>
-      </div>
-      <div class="ptop">
-        <h3 class="ptitle">Real-Time Pharmacy Voice Agent</h3>
-      </div>
-      <div class="tech-row">
-        <span class="tp">Twilio WebSockets</span><span class="tp">Deepgram STT</span><span class="tp">Function Calling</span>
-        <span class="tp">Docker</span>
-      </div>
-      <div class="pcard-body">
-        <div class="pcard-content">
-          <p class="pdesc">End-to-end pharmacy voice assistant receiving audio streams over Twilio WebSockets and transcribing via Deepgram STT. Orchestrates inquiries with LLM function-calling workflows, maintaining sub-2.5s response times with audio frame tuning. Containerized with Docker for local testing.</p>
-          <div class="metrics">
-            <div class="metric"><span class="mv" data-static="true">1.5s</span><span class="ml">p50 Latency</span></div>
-            <div class="metric"><span class="mv" data-static="true">2.5s</span><span class="ml">p95 Latency</span></div>
-            <div class="metric"><span class="mv" data-count="20" data-suffix="ms">—</span><span class="ml">Audio Frame Size</span></div>
-            <div class="metric"><span class="mv" data-static="true">Docker</span><span class="ml">Local Container</span></div>
-          </div>
-        </div>
-        <div class="pcard-vis" aria-label="Pipeline flow: Twilio stream -> Deepgram STT -> LLM response -> Client output">
+        <div class="pcard-vis" aria-label="Agent flow: Stream Video SDK → OpenAI Realtime → Inngest Background Jobs">
           <svg viewBox="0 0 210 110" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <text x="105" y="13" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="10" fill="#1a1f3a" letter-spacing="0.05em">VOICE PIPELINE</text>
             <line x1="10" y1="52" x2="200" y2="52" stroke="#e8e0d0" stroke-width="1" stroke-dasharray="2,3"/>
-            <rect x="8"   y="24" width="44" height="36" fill="#1a1f3a" rx="4"/>
-            <text x="30"  y="39" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="7"  fill="rgba(245,240,232,0.6)">TWILIO</text>
-            <text x="30"  y="51" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8"  fill="#c8690a">WS Stream</text>
+            <rect x="8" y="24" width="44" height="36" fill="#1a1f3a" rx="4"/>
+            <text x="30" y="39" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="7" fill="rgba(245,240,232,0.6)">STREAM</text>
+            <text x="30" y="51" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8" fill="#c8690a">Video SDK</text>
             <line x1="52" y1="42" x2="62" y2="42" stroke="#c8690a" stroke-width="2"/>
             <polygon points="60,38 68,42 60,46" fill="#c8690a"/>
-            <rect x="62"  y="24" width="44" height="36" fill="#1a1f3a" rx="4"/>
-            <text x="84"  y="39" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="7"  fill="rgba(245,240,232,0.6)">STT</text>
-            <text x="84"  y="51" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8"  fill="#c8690a">Deepgram</text>
+            <rect x="62" y="24" width="44" height="36" fill="#1a1f3a" rx="4"/>
+            <text x="84" y="39" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="7" fill="rgba(245,240,232,0.6)">OPENAI</text>
+            <text x="84" y="51" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8" fill="#c8690a">~500ms</text>
             <line x1="106" y1="42" x2="116" y2="42" stroke="#c8690a" stroke-width="2"/>
             <polygon points="114,38 122,42 114,46" fill="#c8690a"/>
             <rect x="116" y="24" width="44" height="36" fill="#1a1f3a" rx="4"/>
-            <text x="138" y="39" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="7"  fill="rgba(245,240,232,0.6)">LLM</text>
-            <text x="138" y="51" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8"  fill="#c8690a">Func Call</text>
+            <text x="138" y="39" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="7" fill="rgba(245,240,232,0.6)">INNGEST</text>
+            <text x="138" y="51" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8" fill="#c8690a">Async Jobs</text>
             <line x1="160" y1="42" x2="170" y2="42" stroke="#c8690a" stroke-width="2"/>
             <polygon points="168,38 176,42 168,46" fill="#c8690a"/>
             <rect x="170" y="24" width="34" height="36" fill="#c8690a" rx="4"/>
-            <text x="187" y="39" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="7"  fill="rgba(255,255,255,0.7)">AUDIO</text>
-            <text x="187" y="51" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8"  fill="#ffffff">Barge-in</text>
-            <text x="105" y="76" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8" fill="#5a6070">Twilio  ·  Deepgram  ·  Docker</text>
+            <text x="187" y="39" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="7" fill="rgba(255,255,255,0.7)">SUMMARY</text>
+            <text x="187" y="51" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8" fill="#ffffff">5-12s</text>
+            <text x="105" y="76" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="8" fill="#5a6070">Stream SDK · OpenAI Realtime · Inngest</text>
           </svg>
         </div>
       </div>

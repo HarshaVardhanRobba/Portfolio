@@ -180,8 +180,8 @@ function initSections() {
 
   /* ===== CAROUSEL FILL ===== */
   (function () {
-    var r1 = ['LangChain','LangGraph','RAG','OpenAI Realtime','Gemini 2.0','DeepEval','Node.js','TypeScript','Next.js','Python','Java','Go','tRPC','REST'];
-    var r2 = ['Inngest','PostgreSQL','MongoDB','Prisma','PySpark','Databricks','Docker','WebRTC','WebSockets','CI/CD'];
+    var r1 = ['LangGraph','LangChain','Inngest agent-kit','MCP','RAG','OpenAI Realtime','Gemini 2.0','AWS Bedrock','FastAPI','Node.js','TypeScript','Python','C#','SQL','DeepEval'];
+    var r2 = ['PostgreSQL','Drizzle ORM','Prisma','Neon','MongoDB','Redis','Azure AI Search','Docker','AWS SageMaker','Trigger.dev','Deepgram','Twilio WebSockets','Vitest','CI/CD'];
     function fill(id, items) {
       var track = document.getElementById(id);
       if (!track) return;
@@ -260,12 +260,12 @@ function initSections() {
     if (!polygon) return;
 
     var finalPts = [
-      { x: 200, y: 56  },  /* AI / ML & LLMs: 9/10 */
+      { x: 200, y: 56  },  /* AI & Agents: 9/10 */
       { x: 325, y: 128 },  /* Backend & APIs: 9/10 */
-      { x: 311, y: 264 },  /* Data & Databases: 8/10 */
-      { x: 200, y: 328 },  /* Infra & Obs: 8/10 */
-      { x: 103, y: 256 },  /* Streaming & Voice: 7/10 */
-      { x: 103, y: 144 }   /* Frontend & Web: 7/10 */
+      { x: 311, y: 264 },  /* Databases: 8/10 */
+      { x: 200, y: 328 },  /* Cloud & DevOps: 8/10 */
+      { x: 75,  y: 272 },  /* Models & Voice: 9/10 */
+      { x: 75,  y: 128 }   /* Languages: 9/10 */
     ];
 
     function draw(ease) {
